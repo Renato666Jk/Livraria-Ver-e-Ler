@@ -1,34 +1,287 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Livraria Ver e Ler - Custom Styles */
+
+/* Hero Section */
+.hero-section {
+    background-color: #0A1128;
+    position: relative;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    mix-blend-mode: overlay;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
+/* Navigation */
+.nav-link {
+    position: relative;
+    color: #1C1C1C;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #D4AF37;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #D4AF37;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #0A1128;
+    color: white;
+    padding: 12px 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #D4AF37;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #0A1128;
+    padding: 12px 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #0A1128;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #0A1128;
     color: white;
 }
 
-.App-link {
-    color: #61dafb;
+.btn-gold {
+    background-color: #D4AF37;
+    color: #0A1128;
+    padding: 12px 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 12px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
+.btn-gold:hover {
+    background-color: #C5A059;
+}
+
+/* Cards */
+.boutique-card {
+    background-color: white;
+    padding: 32px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.boutique-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(10, 17, 40, 0.12);
+}
+
+/* Form inputs */
+.input-boutique {
+    border: none;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.2);
+    padding: 12px 0;
+    background: transparent;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.input-boutique:focus {
+    outline: none;
+    border-bottom-color: #D4AF37;
+}
+
+/* Timeline */
+.timeline-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #D4AF37, transparent);
+}
+
+/* Author card */
+.author-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.author-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(10, 17, 40, 0.9), transparent);
+}
+
+/* Price tag */
+.price-tag {
+    color: #D4AF37;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Rating stars */
+.star-filled {
+    color: #D4AF37;
+}
+
+.star-empty {
+    color: #EAE6D9;
+}
+
+/* Overline text */
+.overline {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    color: #C5A059;
+}
+
+/* Section divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4AF37, transparent);
+}
+
+/* Modal overlay */
+.modal-overlay {
+    background-color: rgba(10, 17, 40, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+/* Badge approved */
+.badge-approved {
+    background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+    color: #0A1128;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    font-size: 10px;
+}
+
+/* Loading spinner */
+.spinner {
+    border: 2px solid #EAE6D9;
+    border-top: 2px solid #D4AF37;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
     from {
-        transform: rotate(0deg);
+        opacity: 0;
+        transform: translateY(20px);
     }
     to {
-        transform: rotate(360deg);
+        opacity: 1;
+        transform: translateY(0);
     }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.fade-in-delay-1 {
+    animation: fadeIn 0.5s ease 0.1s forwards;
+    opacity: 0;
+}
+
+.fade-in-delay-2 {
+    animation: fadeIn 0.5s ease 0.2s forwards;
+    opacity: 0;
+}
+
+.fade-in-delay-3 {
+    animation: fadeIn 0.5s ease 0.3s forwards;
+    opacity: 0;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    max-width: 320px;
+    background-color: #F4F1EA;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Cart badge */
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #D4AF37;
+    color: #0A1128;
+    font-size: 10px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
