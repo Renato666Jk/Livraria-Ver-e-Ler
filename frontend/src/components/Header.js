@@ -19,6 +19,7 @@ const Header = () => {
         { name: 'A Minha História', href: '/historia' },
         { name: 'Meus Livros', href: '/livros-do-autor' },
         { name: 'Mercado de Autores', href: '/marketplace' },
+        { name: 'Loja', href: 'https://loja.infinitepay.io/ver_ler', external: true },
         { name: 'Publicar Meu Livro', href: '/publicar' },
     ];
 
@@ -38,14 +39,27 @@ const Header = () => {
                     {/* Desktop Navigation */}
                     <nav className="hidden lg:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            <Link 
-                                key={link.name}
-                                to={link.href}
-                                className="nav-link text-sm font-medium"
-                                data-testid={`nav-${link.href.replace('/', '')}`}
-                            >
-                                {link.name}
-                            </Link>
+                            link.external ? (
+                                <a 
+                                    key={link.name}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="nav-link text-sm font-medium"
+                                    data-testid={`nav-loja`}
+                                >
+                                    {link.name}
+                                </a>
+                            ) : (
+                                <Link 
+                                    key={link.name}
+                                    to={link.href}
+                                    className="nav-link text-sm font-medium"
+                                    data-testid={`nav-${link.href.replace('/', '')}`}
+                                >
+                                    {link.name}
+                                </Link>
+                            )
                         ))}
                     </nav>
 
@@ -115,14 +129,27 @@ const Header = () => {
                 <div className="lg:hidden bg-[#F4F1EA] border-t border-[#D4AF37]/20" data-testid="mobile-menu">
                     <nav className="flex flex-col p-6 gap-4">
                         {navLinks.map((link) => (
-                            <Link 
-                                key={link.name}
-                                to={link.href}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className="text-[#0A1128] font-medium py-2 border-b border-[#D4AF37]/10"
-                            >
-                                {link.name}
-                            </Link>
+                            link.external ? (
+                                <a 
+                                    key={link.name}
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="text-[#0A1128] font-medium py-2 border-b border-[#D4AF37]/10"
+                                >
+                                    {link.name}
+                                </a>
+                            ) : (
+                                <Link 
+                                    key={link.name}
+                                    to={link.href}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="text-[#0A1128] font-medium py-2 border-b border-[#D4AF37]/10"
+                                >
+                                    {link.name}
+                                </Link>
+                            )
                         ))}
                         {user ? (
                             <>
