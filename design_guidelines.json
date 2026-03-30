@@ -1,0 +1,130 @@
+{
+  "project_name": "Livraria Ver e Ler",
+  "theme": "LIGHT_AND_DARK_HYBRID",
+  "archetype": "Archetype 5 (Jewel & Luxury) + Archetype 1 (Organic & Earthy)",
+  "emotional_tone": "Prestige, classic literature, wisdom, boutique exclusivity, trust",
+  "colors": {
+    "background": {
+      "primary": "#F4F1EA",
+      "secondary": "#EAE6D9",
+      "inverse": "#0A1128"
+    },
+    "surface": {
+      "card": "#FFFFFF",
+      "glass": "rgba(244, 241, 234, 0.8)",
+      "glass_dark": "rgba(10, 17, 40, 0.75)"
+    },
+    "brand": {
+      "navy": "#0A1128",
+      "gold": "#D4AF37",
+      "gold_muted": "#C5A059",
+      "ink": "#1C1C1C"
+    },
+    "text": {
+      "primary": "#1C1C1C",
+      "secondary": "#4A4A4A",
+      "inverse": "#FDFBF7",
+      "gold": "#D4AF37"
+    },
+    "border": {
+      "light": "rgba(212, 175, 55, 0.2)",
+      "dark": "rgba(212, 175, 55, 0.4)",
+      "neutral": "rgba(28, 28, 28, 0.1)"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Cormorant Garamond', serif",
+      "body": "'Outfit', sans-serif",
+      "accent": "'Playfair Display', serif"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl tracking-tight leading-none font-bold",
+      "h2": "text-4xl sm:text-5xl tracking-tight leading-tight font-medium",
+      "h3": "text-2xl sm:text-3xl tracking-normal leading-snug font-medium",
+      "h4": "text-xl sm:text-2xl tracking-normal font-medium",
+      "body_lg": "text-lg leading-relaxed",
+      "body": "text-base leading-relaxed",
+      "overline": "text-xs tracking-[0.2em] uppercase font-bold text-gold_muted"
+    }
+  },
+  "layout_and_spacing": {
+    "generous_spacing": true,
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "bento_grid": "grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12",
+    "optical_alignment": "Apply generous padding inside cards (p-8 to p-12) to avoid text collision with borders."
+  },
+  "components_strategy": {
+    "header": {
+      "type": "Crystal Glass",
+      "classes": "fixed top-0 w-full z-50 backdrop-blur-xl bg-[#F4F1EA]/80 border-b border-[#D4AF37]/20",
+      "nav_links": "text-ink hover:text-gold_muted transition-colors font-medium",
+      "items": ["A Minha História", "Meus Livros", "Mercado de Autores", "Publicar Meu Livro", "Carrinho"]
+    },
+    "hero": {
+      "style": "Cinematic Editorial",
+      "background": "bg-[#0A1128] text-[#FDFBF7] relative overflow-hidden",
+      "overlay": "Use the 'Old Paper Texture' with mix-blend-overlay and 10% opacity to give a tactile feel to the dark background",
+      "layout": "Asymmetric split. Left: Massive serif headline with gold accents. Right: Floating, overlapping 3D-styled book covers."
+    },
+    "book_cards": {
+      "style": "Boutique Display",
+      "classes": "bg-white p-8 border border-[#D4AF37]/20 rounded-none shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300",
+      "image_container": "mb-6 overflow-hidden",
+      "typography": "Heading in Cormorant Garamond, Body in Outfit. Price in Gold."
+    },
+    "buttons": {
+      "primary": "bg-[#0A1128] text-white px-8 py-3 uppercase tracking-widest text-sm font-medium hover:bg-[#D4AF37] transition-colors",
+      "secondary": "bg-transparent border border-[#0A1128] text-[#0A1128] px-8 py-3 uppercase tracking-widest text-sm font-medium hover:bg-[#0A1128] hover:text-white transition-colors",
+      "gold_accent": "bg-[#D4AF37] text-[#0A1128] px-8 py-3 uppercase tracking-widest text-sm font-bold hover:bg-[#C5A059] transition-colors"
+    },
+    "author_timeline": {
+      "style": "Editorial Storytelling",
+      "classes": "relative border-l border-[#D4AF37]/30 ml-6 md:ml-0 md:mx-auto space-y-16",
+      "nodes": "Absolute positioned gold dots. Content boxes offset with generous whitespace."
+    },
+    "dashboard_author": {
+      "style": "Technical Elegance",
+      "classes": "bg-[#F4F1EA] text-[#1C1C1C]",
+      "cards": "bg-white border border-neutral/10 rounded-lg p-6",
+      "inputs": "Shadcn UI customized: border-b only or very subtle full border, focus:border-[#D4AF37] focus:ring-0"
+    }
+  },
+  "media": {
+    "logos": {
+      "primary": "https://customer-assets.emergentagent.com/job_author-marketplace-8/artifacts/vvyjps96_image.png"
+    },
+    "owner_books": {
+      "muito_alem": "https://customer-assets.emergentagent.com/job_af7641f3-df7d-40e0-ac8d-d47156357b73/artifacts/8tlrve9z_0000.PNG",
+      "alem_do_tempo": "https://customer-assets.emergentagent.com/job_af7641f3-df7d-40e0-ac8d-d47156357b73/artifacts/1zr252gv_111.PNG",
+      "voce_sabia": "https://customer-assets.emergentagent.com/job_af7641f3-df7d-40e0-ac8d-d47156357b73/artifacts/t1b3l3sf_6666.PNG"
+    },
+    "owner_photos": {
+      "portrait_1": "https://customer-assets.emergentagent.com/job_af7641f3-df7d-40e0-ac8d-d47156357b73/artifacts/2nj7ucv4_444444.PNG",
+      "portrait_2": "https://customer-assets.emergentagent.com/job_af7641f3-df7d-40e0-ac8d-d47156357b73/artifacts/gdbxtfhg_qq.PNG"
+    },
+    "textures_and_backgrounds": {
+      "vintage_bookstore": "https://images.pexels.com/photos/35893470/pexels-photo-35893470.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "aged_paper": "https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+    }
+  },
+  "interactive_and_motion": {
+    "scroll": "Smooth scrolling strongly recommended (e.g., Lenis) for editorial feel.",
+    "hover_states": "Images scale up slightly (1.05) within hidden overflow containers. Text links feature expanding gold underlines.",
+    "page_transitions": "Subtle fade-in with slight upward transform (10px) on load."
+  },
+  "testing": {
+    "attributes": "All interactive elements, buttons, inputs, and major links MUST include a kebab-case data-testid attribute (e.g., data-testid='buy-now-button', data-testid='author-submit-form')."
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color palette. Do NOT use default tailwind blue or gray.",
+    "Ensure the hero section uses the #0A1128 Navy background and #D4AF37 Gold text for maximum prestige.",
+    "Use pure HTML/Tailwind for the marketing and biography pages to allow for creative, asymmetric layouts.",
+    "Use Shadcn UI for the Author Dashboard, Book Submission Form, and Checkout flows, but customize them to fit the Boutique theme (remove rounded corners, use gold focus rings).",
+    "Never center-align large blocks of text. Left-align for editorial readability.",
+    "Use 'lucide-react' for all icons. Keep icon strokes thin (strokeWidth 1.5) for elegance.",
+    "Implement the 'Selo de Aprovação do Dono' as a prominent gold badge visual on approved books.",
+    "Use JavaScript files (.js, .jsx), not TypeScript."
+  ]
+}
