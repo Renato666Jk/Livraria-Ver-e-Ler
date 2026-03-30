@@ -55,7 +55,7 @@ const Header = () => {
                         <Link to="/carrinho" className="relative p-2" data-testid="cart-link">
                             <ShoppingCart className="w-5 h-5 text-[#0A1128]" strokeWidth={1.5} />
                             {cartCount > 0 && (
-                                <span className="cart-badge" data-testid="cart-count">
+                                <span className="absolute -top-2 -right-2 bg-[#D4AF37] text-[#0A1128] text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center" data-testid="cart-count">
                                     {cartCount}
                                 </span>
                             )}

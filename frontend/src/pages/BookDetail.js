@@ -12,7 +12,7 @@ const BookDetail = () => {
     const { id } = useParams();
     const [book, setBook] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [showSampleChapter, setShowSampleChapter] = useState(false);
+    const [showSampleChapter, setShowSampleChapter] = useState(true);
     const [newReview, setNewReview] = useState({ rating: 5, comment: '' });
     const [submittingReview, setSubmittingReview] = useState(false);
     
